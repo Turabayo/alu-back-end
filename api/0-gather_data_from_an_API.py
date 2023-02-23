@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""get TODO list"""
+""" returns TODO list """
+
 
 import json
 import requests
@@ -13,12 +14,12 @@ if __name__ == "__main__":
     res = requests.get(link)
     todos = json.loads(res.text)
     done = []
-    for x in todos:
-        if x['completed']:
-            done.append(x)
-    print("Employee {} is done with tasks({}/{}):".format(
+    for i in todos:
+        if i['completed']:
+            done.append(i)
+    print('Employee {} is done with tasks({}/{}):'.format(
                                                           user['name'],
                                                           len(done),
                                                           len(todos)))
-    for x in done:
-        print("\t {}".format(x["title"]))
+    for i in done:
+        print("\t {}".format(i["title"]))
