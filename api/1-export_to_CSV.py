@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""get TODO list"""
+""" export data from csv """
 
 import csv
-import jsonZ
+import json
 import requests
 import sys
 if __name__ == "__main__":
